@@ -598,65 +598,50 @@ export default function Page() {
           </div>
         </section>
 
-        <section id="contact" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
-          <div className="grid gap-8 lg:grid-cols-[1fr_0.95fr]">
-            <div className="rounded-[32px] bg-gradient-to-r from-slate-950 via-slate-900 to-violet-900 p-10 text-white shadow-2xl">
-              <div className="max-w-3xl">
-                <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">{t.contact.title}</h2>
-                <p className="mt-4 text-lg leading-8 text-slate-300">{t.contact.text}</p>
-              </div>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <a
-                  href="https://www.linkedin.com/in/nicohmartins"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center rounded-2xl bg-white px-6 py-4 text-base font-medium text-slate-950 hover:bg-slate-100"
-                >
-                  LinkedIn Nicolás
-                </a>
-                <a
-                  href="https://linkedin.com/in/sergioweinmann/"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="inline-flex items-center rounded-2xl border border-white/20 bg-transparent px-6 py-4 text-base font-medium text-white hover:bg-white/10"
-                >
-                  LinkedIn Sergio
-                </a>
-              </div>
-            </div>
+<section id="contact" className="mx-auto max-w-7xl px-6 py-20 lg:px-8">
+  <div className="rounded-[32px] bg-gradient-to-r from-slate-950 via-slate-900 to-violet-900 p-10 text-white shadow-2xl">
+    <div className="max-w-3xl">
+      <h2 className="text-3xl font-semibold tracking-tight md:text-4xl">
+        {lang === "es"
+          ? "Si ya tienen herramientas pero no una capacidad integrada, ahí entra Nexora."
+          : "If you already have tools but not an integrated capability, that's where Nexora comes in."}
+      </h2>
 
-            <div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/60">
-              <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{t.contact.formTitle}</h3>
-              <p className="mt-3 leading-7 text-slate-600">{t.contact.formText}</p>
+      <p className="mt-4 text-lg leading-8 text-slate-300">
+        {lang === "es"
+          ? "Podemos empezar con una conversación inicial para ordenar prioridades, arquitectura y oportunidades de implementación."
+          : "We can start with an initial conversation to align priorities, architecture, and implementation opportunities."}
+      </p>
+    </div>
 
-<div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/60">
-  <h3 className="text-2xl font-semibold tracking-tight text-slate-950">
-    {lang === "es" ? "Escribinos" : "Contact us"}
-  </h3>
+    <div className="mt-8 flex flex-wrap gap-4">
+      <a
+        href="mailto:nicolashmartins@gmail.com?cc=weinmann.sergio@gmail.com&subject=Conversación%20sobre%20Nexora"
+        className="inline-flex items-center rounded-2xl bg-white px-6 py-4 text-base font-medium text-slate-950 hover:bg-slate-100"
+      >
+        {lang === "es" ? "Coordinar conversación" : "Schedule a conversation"}
+      </a>
 
-  <p className="mt-3 leading-7 text-slate-600">
-    {lang === "es"
-      ? "Podés escribirnos por email para una primera conversación sobre consultoría e implementación en Argentina."
-      : "You can email us for an initial conversation about consulting and implementation in Argentina."}
-  </p>
+      <a
+        href="https://www.linkedin.com/in/nicohmartins"
+        target="_blank"
+        rel="noreferrer"
+        className="inline-flex items-center rounded-2xl border border-white/20 bg-transparent px-6 py-4 text-base font-medium text-white hover:bg-white/10"
+      >
+        LinkedIn Nicolás
+      </a>
 
-  <div className="mt-8">
-    <a
-      href="mailto:nicolashmartins@gmail.com?cc=weinmann.sergio@gmail.com&subject=Contacto%20desde%20Nexora"
-      className="inline-flex items-center rounded-2xl bg-slate-900 px-6 py-4 text-base font-medium text-white hover:bg-slate-800"
-    >
-      {lang === "es" ? "Escribinos por email" : "Email us"}
-    </a>
+      <a
+        href="https://linkedin.com/in/sergioweinmann/"
+        target="_blank"
+        rel="noreferrer"
+        className="inline-flex items-center rounded-2xl border border-white/20 bg-transparent px-6 py-4 text-base font-medium text-white hover:bg-white/10"
+      >
+        LinkedIn Sergio
+      </a>
+    </div>
   </div>
-
-  <div className="mt-6 text-sm leading-6 text-slate-500">
-    <p>nicolashmartins@gmail.com</p>
-    <p>weinmann.sergio@gmail.com</p>
-  </div>
-</div>
-            </div>
-          </div>
-        </section>
+</section>
       </main>
 
       <footer className="border-t border-slate-200 bg-white">

@@ -635,8 +635,14 @@ export default function Page() {
                 className="mt-8 space-y-4"
               >
                 <input type="hidden" name="_cc" value="weinmann.sergio@gmail.com" />
-                <input type="hidden" name="_subject" value={lang === "es" ? "Nuevo contacto desde Nexora" : "New contact from Nexora"} />
+                <input
+                  type="hidden"
+                  name="_subject"
+                  value={lang === "es" ? "Nuevo contacto desde Nexora" : "New contact from Nexora"}
+                />
                 <input type="hidden" name="_template" value="table" />
+                <input type="hidden" name="_next" value="https://nexora-site-kappa.vercel.app/" />
+                <input type="hidden" name="_captcha" value="false" />
                 <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
 
                 <div className="grid gap-4 md:grid-cols-2">

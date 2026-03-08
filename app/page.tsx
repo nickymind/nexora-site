@@ -629,71 +629,31 @@ export default function Page() {
               <h3 className="text-2xl font-semibold tracking-tight text-slate-950">{t.contact.formTitle}</h3>
               <p className="mt-3 leading-7 text-slate-600">{t.contact.formText}</p>
 
-              <form
-                action="https://formsubmit.co/nicolashmartins@gmail.com"
-                method="POST"
-                className="mt-8 space-y-4"
-              >
-                <input type="hidden" name="_cc" value="weinmann.sergio@gmail.com" />
-                <input
-                  type="hidden"
-                  name="_subject"
-                  value={lang === "es" ? "Nuevo contacto desde Nexora" : "New contact from Nexora"}
-                />
-                <input type="hidden" name="_template" value="table" />
-                <input type="hidden" name="_next" value="https://nexora-site-kappa.vercel.app/" />
-                <input type="hidden" name="_captcha" value="false" />
-                <input type="text" name="_honey" className="hidden" tabIndex={-1} autoComplete="off" />
+<div className="rounded-[32px] border border-slate-200 bg-white p-8 shadow-xl shadow-slate-200/60">
+  <h3 className="text-2xl font-semibold tracking-tight text-slate-950">
+    {lang === "es" ? "Escribinos" : "Contact us"}
+  </h3>
 
-                <div className="grid gap-4 md:grid-cols-2">
-                  <div>
-                    <label className="mb-2 block text-sm font-medium text-slate-700">{t.contact.name}</label>
-                    <input
-                      name="name"
-                      required
-                      className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900"
-                      placeholder={t.contact.name}
-                    />
-                  </div>
-                  <div>
-                    <label className="mb-2 block text-sm font-medium text-slate-700">{t.contact.email}</label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900"
-                      placeholder="nombre@empresa.com"
-                    />
-                  </div>
-                </div>
+  <p className="mt-3 leading-7 text-slate-600">
+    {lang === "es"
+      ? "Podés escribirnos por email para una primera conversación sobre consultoría e implementación en Argentina."
+      : "You can email us for an initial conversation about consulting and implementation in Argentina."}
+  </p>
 
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-700">{t.contact.company}</label>
-                  <input
-                    name="company"
-                    className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900"
-                    placeholder={t.contact.company}
-                  />
-                </div>
+  <div className="mt-8">
+    <a
+      href="mailto:nicolashmartins@gmail.com?cc=weinmann.sergio@gmail.com&subject=Contacto%20desde%20Nexora"
+      className="inline-flex items-center rounded-2xl bg-slate-900 px-6 py-4 text-base font-medium text-white hover:bg-slate-800"
+    >
+      {lang === "es" ? "Escribinos por email" : "Email us"}
+    </a>
+  </div>
 
-                <div>
-                  <label className="mb-2 block text-sm font-medium text-slate-700">{t.contact.message}</label>
-                  <textarea
-                    name="message"
-                    required
-                    rows={5}
-                    className="w-full rounded-2xl border border-slate-300 px-4 py-3 outline-none transition focus:border-slate-900"
-                    placeholder={t.contact.messagePlaceholder}
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="inline-flex items-center rounded-2xl bg-slate-900 px-6 py-4 text-base font-medium text-white hover:bg-slate-800"
-                >
-                  {t.contact.send}
-                </button>
-              </form>
+  <div className="mt-6 text-sm leading-6 text-slate-500">
+    <p>nicolashmartins@gmail.com</p>
+    <p>weinmann.sergio@gmail.com</p>
+  </div>
+</div>
             </div>
           </div>
         </section>
